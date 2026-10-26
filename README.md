@@ -1,6 +1,12 @@
 # AirAware
 
-**AirAware** is a lightweight, responsive Flutter mobile application designed to display real-time Air Quality Index (AQI) data with colour-coded categories and pollutant measurements. It connects to open public APIs to empower citizens with environmental awareness.
+**AirAware** is a lightweight, responsive Flutter application (Mobile & Web) designed to display real-time Air Quality Index (AQI) data with colour-coded categories and pollutant measurements. It connects to open public APIs to empower citizens with environmental awareness.
+
+---
+
+## 🌐 Live Web Application
+Experience the live web version deployed here:  
+👉 **[https://airaware-aqi.surge.sh](https://airaware-aqi.surge.sh)**
 
 ---
 
@@ -75,8 +81,8 @@ lib/
 ### Steps
 1. **Clone the repository:**
    ```bash
-   git clone <REPOSITORY_URL>
-   cd air_aware
+   git clone https://github.com/Syamprasad1212/Air_aware.git
+   cd Air_aware
    ```
 2. **Install dependencies:**
    ```bash
@@ -84,19 +90,28 @@ lib/
    ```
 3. **Run the application:**
    ```bash
+   # Run on Mobile (Android Device or Emulator)
    flutter run
+
+   # Or Run on Web (Chrome / Edge)
+   flutter run -d chrome
    ```
 
 ---
 
-## Build APK
+## Build Commands
 
-To generate a release Android APK:
-```bash
-flutter build apk --release
-```
-The output file will be generated at:  
-`build/app/outputs/flutter-apk/app-release.apk`
+- **Android APK:**
+  ```bash
+  flutter build apk --release
+  ```
+  Output: `build/app/outputs/flutter-apk/app-release.apk`
+
+- **Web Version:**
+  ```bash
+  flutter build web --release
+  ```
+  Output: `build/web/`
 
 ---
 

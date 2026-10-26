@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'package:flutter/foundation.dart';
 import 'package:http/http.dart' as http;
 import 'package:geolocator/geolocator.dart';
 import 'aqi_model.dart';
@@ -127,9 +128,11 @@ class AqiService {
 
       final response = await http.get(
         uri,
-        headers: {
-          'User-Agent': 'AirAwareFlutterApp/1.0 (CollegeLabAssignment)',
-        },
+        headers: kIsWeb
+            ? {}
+            : {
+                'User-Agent': 'AirAwareFlutterApp/1.0 (CollegeLabAssignment)',
+              },
       ).timeout(const Duration(seconds: 5));
 
       if (response.statusCode == 200) {
